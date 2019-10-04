@@ -29,7 +29,7 @@ Set olApp = CreateObject("Outlook.Application")
             .Save
             End With
     Next e
-      
+
 Application.ScreenUpdating = True
 MsgBox ("Email(s) successfully drafted")
 Set olApp = Nothing
