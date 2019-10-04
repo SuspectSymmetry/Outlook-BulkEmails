@@ -1,5 +1,6 @@
 Option Explicit
 
+'-----Button A------
 Sub DraftEmails()
 Dim Class As New Class1
 Set Class = New Class1
@@ -19,7 +20,8 @@ With Class
 End With
 Set Class = Nothing
 End Sub
-
+                    
+'-----Button B------
 Sub SendEmails()
 Dim Class As New Class1
 Set Class = New Class1
@@ -43,6 +45,7 @@ End With
 Set Class = Nothing
 End Sub
 
+'-----Button C------
 Sub ClearALL()
 Dim Response As String
 
