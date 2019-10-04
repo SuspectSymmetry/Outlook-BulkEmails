@@ -1,6 +1,5 @@
 Option Explicit
-
-'-----Button A------
+'---Button A---
 Sub DraftEmails()
 Dim Class As New Class1
 Set Class = New Class1
@@ -8,11 +7,17 @@ With Class
     .Response = MsgBox("Are you sure you want to save the emails to your draft folder?", vbYesNo, "Drafs?")
         If .Response <> vbYes Then Exit Sub
     Application.ScreenUpdating = False
-    
+        
     'Emails---------------------
+    .EmailPath = .CurrentPath & "\" & "Template.msg"
+    If Dir(.EmailPath) = "" Then
+        MsgBox "Could not find the file " & .EmailPath
+        Exit Sub
+    End If
+    
     Dim i As Integer
     For i = 3 To .LastRow
-        .Msg(.Filepath & "\" & "Template.msg", i).Save
+        .Msg(.EmailPath, i).Save
     Next i
     
     Application.ScreenUpdating = True
@@ -20,8 +25,8 @@ With Class
 End With
 Set Class = Nothing
 End Sub
-                    
-'-----Button B------
+
+'---Button B---
 Sub SendEmails()
 Dim Class As New Class1
 Set Class = New Class1
@@ -45,7 +50,7 @@ End With
 Set Class = Nothing
 End Sub
 
-'-----Button C------
+'---Button C---
 Sub ClearALL()
 Dim Response As String
 
