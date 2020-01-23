@@ -1,5 +1,5 @@
 # Outlook-BulkEmails
-By SuspectSymmetry
+By Migouel
 
 Sending bulk emails through Outlook using Excel and VBA
 * Uses a template .msg file
@@ -8,4 +8,4 @@ Sending bulk emails through Outlook using Excel and VBA
 
 The macro needs to have a file Template.msg save within the save directory to work.
 
-![Settings Window](https://raw.github.com/SuspectSymmetry/Outlook-BulkEmails/master/Screenshot.png)
+![Settings Window](https://raw.github.com/migouelBL/Outlook-BulkEmails/master/Screenshot.png)
